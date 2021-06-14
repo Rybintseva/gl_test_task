@@ -9,6 +9,12 @@ Details:
 1. For the application operations (REST calls) please use https://gorest.co.in/
 
 
+## Requirements
+
+* Python 3.6+
+
+* Packages from requirements.txt
+
 ## How to run tests from Docker
 
 * Install **Docker**
