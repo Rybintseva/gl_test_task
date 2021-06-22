@@ -10,7 +10,7 @@ class TestAPI:
     def test_create_user(self, user_data):
         user_data['name'] = f'Test_{generate_random_string(5)}'
         user_data['email'] = f'Test@{generate_random_string(5)}.{generate_random_string(3)}'
-        self.user_id = self.api_page.create_user(SOURCE_USERS_URL, data=user_data)
+        TestAPI.user_id = self.api_page.create_user(SOURCE_USERS_URL, data=user_data)
         response_user_data = self.api_page.get_user_data(SOURCE_USERS_URL, self.user_id)
         assert is_dict_in_dict(response_user_data['data'], user_data), \
             f'User was not created. Actual user data: {response_user_data["data"]}. Expected: {user_data}'
