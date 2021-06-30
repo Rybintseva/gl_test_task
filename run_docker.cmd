@@ -1,5 +1,3 @@
-#!/bin/bash
-
 docker build -t ubuntu_test_image .
 
 docker run --name test_container -i ubuntu_test_image
